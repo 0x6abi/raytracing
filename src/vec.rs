@@ -34,9 +34,9 @@ impl Vec3 {
         self.x * other.x + self.y * other.y + self.z * other.z
     }
 
-    // Return the cross/vector product of two Vec3s
-    // The returned Vec3 is orthogonal to the
-    // passed Vec3s
+    /// Return the cross/vector product of two Vec3s
+    /// The returned Vec3 is orthogonal to the
+    /// passed Vec3s
     pub fn cross(&self, other: &Self) -> Self {
         let x = self.y * other.z - self.z * other.y;
         let y = self.z * other.x - self.x * other.z;
