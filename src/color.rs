@@ -44,8 +44,8 @@ impl ops::Add for Color {
     fn add(self, rhs: Self) -> Self::Output {
         Color {
             r: self.r + rhs.r,
-            b: self.g + rhs.g,
-            g: self.b + rhs.b,
+            g: self.g + rhs.g,
+            b: self.b + rhs.b,
         }
     }
 }
