@@ -1,0 +1,3 @@
+#!/bin/sh
+cargo run > img.ppm
+imv img.ppm
