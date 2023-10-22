@@ -78,9 +78,9 @@ impl ops::Sub for Vec3 {
     type Output = Self;
 
     fn sub(self, rhs: Self) -> Self::Output {
-        let x = self.x + rhs.x;
-        let y = self.y + rhs.y;
-        let z = self.z + rhs.z;
+        let x = self.x - rhs.x;
+        let y = self.y - rhs.y;
+        let z = self.z - rhs.z;
         Vec3::new(x, y, z)
     }
 }
