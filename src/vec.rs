@@ -93,6 +93,7 @@ impl ops::SubAssign for Vec3 {
 
 impl ops::Mul for Vec3 {
     type Output = Self;
+
     fn mul(self, rhs: Self) -> Self::Output {
         let x = self.x * rhs.x;
         let y = self.y * rhs.y;
@@ -103,6 +104,7 @@ impl ops::Mul for Vec3 {
 
 impl ops::Mul<f64> for Vec3 {
     type Output = Self;
+
     fn mul(self, rhs: f64) -> Self::Output {
         let x = self.x * rhs;
         let y = self.y * rhs;
@@ -113,6 +115,7 @@ impl ops::Mul<f64> for Vec3 {
 
 impl ops::Mul<Vec3> for f64 {
     type Output = Vec3;
+
     fn mul(self, rhs: Vec3) -> Vec3 {
         let x = self * rhs.x;
         let y = self * rhs.y;
