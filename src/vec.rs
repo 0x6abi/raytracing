@@ -20,7 +20,7 @@ impl Vec3 {
 
 /* ANALYTIC GEOMETRY */
 impl Vec3 {
-    fn length_squared(&self) -> f64 {
+    pub fn length_squared(&self) -> f64 {
         self.x.powi(2) + self.y.powi(2) + self.z.powi(2)
     }
 
