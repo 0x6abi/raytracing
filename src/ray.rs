@@ -11,7 +11,7 @@ impl Ray {
     }
 
     pub fn ray_color(&self) -> Color {
-        let t = hit_sphere(Point3::new(0.0, 0.0, -1.0), 0.5, self);
+        let t = hit_sphere(&Point3::new(0.0, 0.0, -1.0), 0.5, self);
         if t > 0.0 {
             let n = Vec3::unit_vector(&(self.at(t) - Vec3::new(0.0, 0.0, -1.0)));
             return 0.5 * Color::new(n.x + 1.0, n.y + 1.0, n.z + 1.0);
@@ -22,8 +22,8 @@ impl Ray {
     }
 }
 
-fn hit_sphere(center: Point3, radius: f64, r: &Ray) -> f64 {
-    let oc = r.origin - center;
+fn hit_sphere(center: &Point3, radius: f64, r: &Ray) -> f64 {
+    let oc = r.origin - *center;
     let a = r.direction.length_squared();
     let half_b = Vec3::dot(&oc, &r.direction);
     let c = oc.length_squared() - radius * radius;
